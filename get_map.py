@@ -8,7 +8,7 @@ import argparse
 import math
 
 import numpy as np
-
+import numpy as np
 #----------------------------------------------------#
 #   用于计算mAP
 #   代码克隆自https://github.com/Cartucho/mAP
