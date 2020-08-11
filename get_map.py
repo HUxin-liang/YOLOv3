@@ -6,7 +6,7 @@ import operator
 import sys
 import argparse
 import math
-
+# from cv2 import cv2
 import numpy as np
 
 #----------------------------------------------------#
@@ -329,8 +329,9 @@ def draw_plot_func(dictionary, n_classes, window_title, plot_title, x_label, out
     # save the plot
     fig.savefig(output_path)
     # show image
-    if to_show:
-        plt.show()
+    # TODO
+    # if to_show:
+    #     plt.show()
     # close the plot
     plt.close()
 
@@ -645,8 +646,9 @@ with open(results_files_path + "/results.txt", 'w') as results_file:
                 cv2.rectangle(img_cumulative,(bb[0],bb[1]),(bb[2],bb[3]),color,2)
                 cv2.putText(img_cumulative, class_name, (bb[0],bb[1] - 5), font, 0.6, color, 1, cv2.LINE_AA)
                 # show image
-                cv2.imshow("Animation", img)
-                cv2.waitKey(20) # show for 20 ms
+                # TODO show()
+                # cv2.imshow("Animation", img)
+                # cv2.waitKey(20) # show for 20 ms
                 # save image to results
                 output_img_path = results_files_path + "/images/detections_one_by_one/" + class_name + "_detection" + str(idx) + ".jpg"
                 cv2.imwrite(output_img_path, img)
