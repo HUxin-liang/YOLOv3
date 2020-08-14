@@ -12,7 +12,10 @@ if __name__ == "__main__":
     device = torch.device('cpu')
     config = {"model_params": {"backbone_name": "darknet_53"},"yolo": {"anchors": [[1,2,3],[2,3,4],[3,4,5]],"classes": 80}}
     m = YoloBody(config).to(device)
-    # x = np.array([3,416,416],dtype=float)
+
+    # summary
     # summary(m, input_size=(3, 416, 416))
 
+    # test stat
+    # 可以显示flop
     stat(m, (3, 416, 416))
